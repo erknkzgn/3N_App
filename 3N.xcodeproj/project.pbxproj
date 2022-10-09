@@ -20,6 +20,9 @@
 		33020A4628E1A97F0071C054 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 33020A4528E1A97F0071C054 /* GoogleService-Info.plist */; };
 		33020A4928E1AD660071C054 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 33020A4828E1AD660071C054 /* FirebaseDatabase */; };
 		33020A4C28ECC08F0071C054 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33020A4B28ECC08F0071C054 /* Categories.swift */; };
+		33020A5328EE234F0071C054 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33020A5228EE234F0071C054 /* CategoryTableViewCell.swift */; };
+		33020A5628EE2B320071C054 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33020A5528EE2B320071C054 /* Extensions.swift */; };
+		33020A5928EE31CF0071C054 /* FirebaseOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33020A5828EE31CF0071C054 /* FirebaseOperations.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +59,9 @@
 		33020A4328E19F660071C054 /* MainTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableVC.swift; sourceTree = "<group>"; };
 		33020A4528E1A97F0071C054 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		33020A4B28ECC08F0071C054 /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
+		33020A5228EE234F0071C054 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
+		33020A5528EE2B320071C054 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		33020A5828EE31CF0071C054 /* FirebaseOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseOperations.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,10 +113,12 @@
 		33020A0D28E19D7D0071C054 /* 3N */ = {
 			isa = PBXGroup;
 			children = (
-				33020A4A28ECC0750071C054 /* Model */,
-				33020A4028E19DD50071C054 /* ViewModels */,
-				33020A3F28E19DC00071C054 /* Views */,
-				33020A3E28E19DAD0071C054 /* Supporting Files */,
+				33020A5728EE31AA0071C054 /* Network */,
+				33020A5428EE2AFB0071C054 /* Utils */,
+				33020A5128ECD0D60071C054 /* SupportingFiles */,
+				33020A5028ECD0C30071C054 /* Views */,
+				33020A4F28ECD08D0071C054 /* ViewModels */,
+				33020A4E28ECD0790071C054 /* Model */,
 			);
 			path = 3N;
 			sourceTree = "<group>";
@@ -132,7 +140,34 @@
 			path = 3NUITests;
 			sourceTree = "<group>";
 		};
-		33020A3E28E19DAD0071C054 /* Supporting Files */ = {
+		33020A4E28ECD0790071C054 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				33020A4B28ECC08F0071C054 /* Categories.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		33020A4F28ECD08D0071C054 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		33020A5028ECD0C30071C054 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				33020A1928E19D7E0071C054 /* LaunchScreen.storyboard */,
+				33020A1428E19D7D0071C054 /* Main.storyboard */,
+				33020A1228E19D7D0071C054 /* ViewController.swift */,
+				33020A4328E19F660071C054 /* MainTableVC.swift */,
+				33020A5228EE234F0071C054 /* CategoryTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		33020A5128ECD0D60071C054 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
 				33020A0E28E19D7D0071C054 /* AppDelegate.swift */,
@@ -141,33 +176,23 @@
 				33020A1C28E19D7E0071C054 /* Info.plist */,
 				33020A4528E1A97F0071C054 /* GoogleService-Info.plist */,
 			);
-			name = "Supporting Files";
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
-		33020A3F28E19DC00071C054 /* Views */ = {
+		33020A5428EE2AFB0071C054 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				33020A1928E19D7E0071C054 /* LaunchScreen.storyboard */,
-				33020A1428E19D7D0071C054 /* Main.storyboard */,
-				33020A1228E19D7D0071C054 /* ViewController.swift */,
-				33020A4328E19F660071C054 /* MainTableVC.swift */,
+				33020A5528EE2B320071C054 /* Extensions.swift */,
 			);
-			name = Views;
+			path = Utils;
 			sourceTree = "<group>";
 		};
-		33020A4028E19DD50071C054 /* ViewModels */ = {
+		33020A5728EE31AA0071C054 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				33020A5828EE31CF0071C054 /* FirebaseOperations.swift */,
 			);
-			name = ViewModels;
-			sourceTree = "<group>";
-		};
-		33020A4A28ECC0750071C054 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				33020A4B28ECC08F0071C054 /* Categories.swift */,
-			);
-			name = Model;
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,10 +334,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				33020A1328E19D7D0071C054 /* ViewController.swift in Sources */,
+				33020A5328EE234F0071C054 /* CategoryTableViewCell.swift in Sources */,
+				33020A5928EE31CF0071C054 /* FirebaseOperations.swift in Sources */,
 				33020A0F28E19D7D0071C054 /* AppDelegate.swift in Sources */,
 				33020A4C28ECC08F0071C054 /* Categories.swift in Sources */,
 				33020A4428E19F660071C054 /* MainTableVC.swift in Sources */,
 				33020A1128E19D7D0071C054 /* SceneDelegate.swift in Sources */,
+				33020A5628EE2B320071C054 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -493,7 +521,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 99TG5G5Z29;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = 3N/Info.plist;
+				INFOPLIST_FILE = 3N/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -522,7 +550,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 99TG5G5Z29;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = 3N/Info.plist;
+				INFOPLIST_FILE = 3N/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
